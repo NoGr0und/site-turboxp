@@ -1,0 +1,433 @@
+/* Define a fonte 'Poppins' importada do Google Fonts para ser usada em todo o documento */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Definições gerais para todos os elementos HTML */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilização do logotipo */
+.logo {
+    width: 200px; /* Largura do logotipo */
+    height: auto; /* Altura ajustada automaticamente à largura */
+    user-select: none; /* Evita a seleção de texto no logotipo */
+}
+
+/* Estilização da página */
+body {
+    display: static;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #080808;
+    background-size: cover; /* A imagem de fundo cobrirá toda a área */
+    background-position: center; /* Centraliza a imagem de fundo */
+}
+
+/* Estilização do cabeçalho (Header) */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99; /* Camada mais alta (fica acima de outros elementos) */
+}
+
+/* Estilização do logotipo no cabeçalho */
+.logo {
+    font-size: 2em;
+    color: #fff; /* Cor do logotipo */
+    user-select: none; /* Evita a seleção de texto no logotipo */
+}
+
+/* Estilização dos links de navegação no cabeçalho */
+.navegacao a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff; /* Cor do texto */
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 40px;
+}
+
+/* Efeito de sublinhado nos links de navegação ao passar o mouse */
+.navegacao a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff; /* Cor do sublinhado */
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scale(0);
+    transition: transform 0.5s;
+}
+
+.navegacao a:hover::after {
+    transform-origin: left;
+    transform: scale(1);
+}
+
+/* Estilização do botão "Login" no cabeçalho */
+.navegacao .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.5s;
+}
+
+.navegacao .btnLogin-popup:hover {
+    background: #fff; /* Cor de fundo ao passar o mouse */
+    color: #162938; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilização do contêiner principal */
+.wrapper {
+    position: absolute;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform 0.5s ease, height 0.2s ease;
+    z-index: 1;
+}
+
+/* Ativação do contêiner principal */
+.wrapper.active-popup {
+    transform: scale(1);
+    z-index: 1;
+}
+
+/* Aumento de altura do contêiner principal quando ativo */
+.wrapper.active {
+    height: 520px;
+}
+
+/* Estilização dos formulários de login e registro */
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+/* Estilização do formulário de login */
+.wrapper .form-box.login {
+    transition: transform 0.18s ease;
+    transform: translateX(0);
+}
+
+/* Efeito de deslize do formulário de login quando ativo */
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+/* Estilização do formulário de registro */
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+/* Efeito de deslize do formulário de registro quando ativo */
+.wrapper.active .form-box.register {
+    transition: transform 0.18s ease;
+    transform: translateX(0);
+}
+
+/* Estilização do ícone de fechar o formulário */
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #000000; /* Cor de fundo do ícone de fechar */
+    font-size: 2em;
+    color: #ffffff; /* Cor do ícone de fechar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Estilização do título do formulário */
+.form-box h2 {
+   font-size: 2em;
+    color: #000000;
+    text-align: center ;
+}
+
+/* Estilização das caixas de entrada de texto */
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #000000;
+    margin: 30px 0;
+}
+
+/* Estilização das etiquetas das caixas de entrada de texto */
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #000000;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+/* Efeito de animação das etiquetas quando a caixa de entrada de texto está em foco ou preenchida */
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: 5px;
+}
+
+/* Estilização das caixas de entrada de texto */
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+    color: #000000;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+/* Estilização dos ícones nas caixas de entrada de texto */
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #000000;
+    line-height: 57px;
+}
+
+/* Estilização do lembrete "Lembrar de mim" */
+.lembrar-de-mim {
+    font-size: 0.7em;
+    color: #000000;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilização da caixa de seleção "Lembrar de mim" */
+.lembrar-de-mim label input {
+    accent-color: #00abfa; /* Cor de realce da caixa de seleção */
+    margin-right: 3px;
+}
+
+/* Estilização do link "Esqueceu a senha?" */
+.lembrar-de-mim a {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Efeito de sublinhado no link "Esqueceu a senha?" ao passar o mouse */
+.lembrar-de-mim a:hover {
+    text-decoration: underline;
+}
+
+/* Estilização do botão */
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #000000; /* Cor de fundo do botão */
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #ffffff; /* Cor do texto do botão */
+    font-weight: 500;
+}
+
+/* Estilização do texto "Já possui uma conta?" ou "Não possui uma conta?" */
+.login-register {
+    font-size: 0.8em;
+    color: #000000;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+/* Estilização do link "Registrar" ou "Login" no texto de registro/login */
+.login-register p a {
+    color: #00c3ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Efeito de sublinhado no link "Registrar" ou "Login" ao passar o mouse */
+.login-register p a:hover {
+    text-decoration: underline;
+}
+    
+section h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px; 
+    background: transparent;
+    width: 400px; 
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/* banner */
+.banner-container {
+    top: 130px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.banner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.banner-item {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
+.banner-item img {
+    width: 100%;
+    height: auto;
+}
+
+.info-btn {
+    position: relative;
+    background-color: #000000;
+    width: 350px;
+    height: auto;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 60px;
+    left: 120px;
+    bottom: 150px;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.banner-indicators {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 100px; /* Mova os indicadores para a parte inferior */
+    left: 0; /* Centralize os indicadores na horizontal */
+    right: 0;
+}
+
+.banner-indicator {
+    width: 10px; /* Largura do indicador */
+    height: 10px; /* Altura do indicador */
+    border-radius: 50%; /* Borda arredondada para criar um círculo */
+    background-color: #ffffff; /* Cor das bolinhas brancas */
+    margin: 0 5px; /* Espaçamento entre os indicadores */
+    cursor: pointer;
+}
+
+.banner-indicator.active {
+    background-color: #000000; /* Cor preta para o indicador ativo */
+}
+
+.form-pesquisa{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-pesquisa[type="text"] {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 10px;
+    width: 400px;
+}
+
+.input-pesquisabtn[type="submit"] {
+    background-color: #f7f8f8;
+    color: #000000;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.input-pesquisabtn[type="submit"]:hover {
+    background-color: #0696f7;
+}
+
+.estrutura {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 20px;
+    border: white;
+    border-radius: 10px;
+    box-shadow:0 0 15px rgb(255, 255, 255);
+    position: relative;
+    display: absolute;
+    top: 750px;
+   }
+
+  .footer {
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    color: #000000;
+    position: relative;
+    display: absolute;
+    top: 800px;
+   }
+
+   .social-icons a {
+    margin: 0 5px;
+   }
+   
+   .social-icons img {
+    width: 32px;
+    height: 32px;
+   }
