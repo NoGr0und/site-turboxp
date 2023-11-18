@@ -419,8 +419,9 @@ section h3 {
     text-align: center;
     color: #000000;
     position: relative;
-    display: absolute;
+   display: absolute;
     top: 800px;
+    justify-content: space-between;
    }
 
    .social-icons a {
