@@ -23,14 +23,15 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #080808;
+    background: #080808; /*fundo da navbar */
     background-size: cover; /* A imagem de fundo cobrirá toda a área */
     background-position: center; /* Centraliza a imagem de fundo */
 }
 
 /* Estilização do cabeçalho (Header) */
 header {
-    position: fixed;
+    background-color: #080808;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -38,7 +39,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 99; /* Camada mais alta (fica acima de outros elementos) */
+    z-index: 0; /* Camada mais alta (fica acima de outros elementos) */
 }
 
 /* Estilização do logotipo no cabeçalho */
@@ -102,6 +103,7 @@ header {
 /* Estilização do contêiner principal */
 .wrapper {
     position: absolute;
+    left: 600px; /* era isso aqui q apagaram */
     width: 400px;
     height: 440px;
     background: transparent;
@@ -309,6 +311,7 @@ section h3 {
 }
 
 /* banner */
+
 .banner-container {
     top: 130px;
     position: absolute;
@@ -351,7 +354,7 @@ section h3 {
     position: absolute;
     display: flex;
     justify-content: center;
-    bottom: 100px; /* Mova os indicadores para a parte inferior */
+    bottom: 150px; /* Mova os indicadores para a parte inferior */
     left: 0; /* Centralize os indicadores na horizontal */
     right: 0;
 }
