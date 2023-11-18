@@ -18,7 +18,7 @@
 
 /* Estilização da página */
 body {
-    display: flex;
+    display: fixed;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
