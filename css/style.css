@@ -18,8 +18,7 @@
 
 /* Estilização da página */
 body {
-    display: static;
-    flex-direction: column;
+    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -419,8 +418,8 @@ section h3 {
     text-align: center;
     color: #000000;
     position: relative;
-   display: absolute;
-    top: 800px;
+    display: absolute;
+    top: 1100px;
     justify-content: space-between;
    }
 
