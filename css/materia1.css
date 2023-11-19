@@ -1,0 +1,127 @@
+/* Define a fonte 'Poppins' importada do Google Fonts para ser usada em todo o documento */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Definições gerais para todos os elementos HTML */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilização do logotipo */
+.logo {
+    width: 200px;
+    height: auto;
+    user-select: none;
+    font-size: 2em;
+    color: #fff;
+}
+
+/* Estilização do cabeçalho (Header) */
+header {
+    background-color: #080808;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99; /* Camada mais alta (fica acima de outros elementos) */
+}
+
+/* Estilos da navegação */
+.navegacao a {
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 40px;
+    position: relative;
+}
+
+/* Efeito de sublinhado nos links de navegação ao passar o mouse */
+.navegacao a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scale(0);
+    transition: transform 0.5s;
+}
+
+.navegacao a:hover::after {
+    transform-origin: left;
+    transform: scale(1);
+}
+
+/* Estilos do corpo da página */
+body {
+    position: relative;
+    top: 70px;
+    font-weight: 100;
+    margin-left: 40px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000000;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilos para a seção principal */
+section {
+    position: relative;
+    top: 90px;
+    width: 1500px;/*lados*/
+    height: 1400px; /*baixo*/
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    backdrop-filter: blur(30px);
+    margin: 40px; /* Adicione margens internas para afastar o conteúdo das bordas */
+}
+
+#container p {
+    position: relative;
+    left: 10px;
+    font-weight: 70;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+}
+
+#container h3 {
+    margin: 20px; /* Adicione margens ao redor do texto conforme necessário */
+    left: 5px;
+    position: relative;
+    font-weight: 70;
+    font-size: 35px;
+    color: #fff;
+    font-weight: 600;
+
+}
+
+.materia-item {
+    position: relative;
+}
+
+.materia-item img {
+    width: 50%;
+    height: auto;
+    position: absolute; /* Usando position: absolute para posicionar a imagem dentro de .materia-item */
+    top: 210px; /* Ajuste conforme necessário */
+    left: 1080px; /* Ajuste conforme necessário */
+    transform: translate(-50%, -50%); /* Centralizando a imagem dentro de .materia-item */
+}
+
+

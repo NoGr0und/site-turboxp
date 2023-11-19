@@ -30,7 +30,7 @@ body {
 /* Estilização do cabeçalho (Header) */
 header {
     background-color: #080808;
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -38,7 +38,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 0; /* Camada mais alta (fica acima de outros elementos) */
+    z-index: 99; /* Camada mais alta (fica acima de outros elementos) */
 }
 
 /* Estilização do logotipo no cabeçalho */
@@ -102,6 +102,7 @@ header {
 /* Estilização do contêiner principal */
 .wrapper {
     position: absolute;
+    top: 180px;
     left: 600px; /* era isso aqui q apagaram */
     width: 400px;
     height: 440px;
