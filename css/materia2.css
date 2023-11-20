@@ -128,3 +128,10 @@ section {
     left: 1160px; 
     transform: translate(-50%, -50%); /* Centralizando a imagem dentro de .materia-item */
 }
+
+.btncomp {
+    right: 250px;
+    top: 330px;
+    position: relative;
+    display: flex;
+}
