@@ -81,138 +81,69 @@ header {
     transform: scale(1);
 }
 
+/* Estilo geral do formulário */
 .form-box {
     position: relative;
-    bottom: 0px;
     top: 170px;
-    width: 680px;
-    height: 500px;
+    right: 480px;
+    width: 760px;
+    height: 680px;
     background: transparent;
     border: 2px solid #fff;
-    outline: none;
     border-radius: 6px;
     cursor: pointer;
     font-size: 1.1em;
     color: #fff;
     font-weight: 100;
-    right: 450px;
-
+    padding: 10px; /* Adicionar algum espaço interno */
+    box-sizing: border-box; /* Evitar que padding afete as dimensões totais */
     backdrop-filter: blur(30px);
 }
 
-/* Estilização do sublinhado do campo de email */
+/* Estilização dos campos de entrada */
 .input-box {
     position: relative;
-    width: 90%;
-    height: 40px;
-    bottom: -40px;
-    border-bottom: 2px solid #fff;
-    margin: 60px 20px 30px;
-    background: transparent;
-    border: 2px solid #fff;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1.1em;
-    font-weight: 500;
+    margin: 30px 0; /* Espaço entre os campos */
 }
-
-.input-box.message label {
-    position: relative;
-    width: 90%;
-    top: -188px;
-    margin-left: 10px;
-    color: #fff;
-    font-size: 1.1em;
-}
-
-.input-box.name label {
-    position: relative;
-    width: 90%;
-    top: -70px;
-    margin-left: 1px;
-    color: #fff;
-    font-size: 1.1em;
-}
-
-.input-box.email label {
-    position: relative;
-    width: 90%;
-    top: -70px;
-    margin-left: 1px;
-    color: #fff;
-    font-size: 1.1em;
-}
-
-.input-box.message {
-    width: 0px;
-    height: 0px;
-    top: 20px;
-    background: transparent;
-    border: transparent;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1.1em;
-    font-weight: 500;
-    margin-left: 10px;
-}
-
-.input-box.message textarea {
-    width: 450px;
-    height: 150px;
-    background: transparent;
-    border: 2px solid #fff;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: .7em;
-    font-weight: 500;
-    margin-left: 10px;
-    resize: none;
-    padding: 10px;
-    color: #ffffff;
-    line-height: 1.5;
-}
-
 
 .input-box label {
-    position: center;
-    top: -110%;
-    left: 5px;
-    font-size: 1em;
+    position: absolute;
+    top: -28px; /* Ajuste fino para o rótulo ficar acima do campo */
+    left: 8px;
+    font-size: 1.2em; /* Reduzir o tamanho do rótulo para uma aparência mais limpa */
     color: #ffffff;
     font-weight: 600;
     pointer-events: none;
-    padding: 0 35px 0 5px;
-    transition: 0.5s;
+    transition: top 0.3s ease, font-size 0.3s ease;
 }
 
-.input-box input {
-    position: center;
+.input-box input,
+.input-box textarea {
     width: 100%;
-    height: 100%;
+    height: 50px;
     background: transparent;
-    border: none;
+    border: 2px solid #fff;
     outline: none;
-    font-size: 0.9em;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 10px 15px; /* Adicionar algum preenchimento interno */
+    box-sizing: border-box; /* Evitar que padding afete as dimensões totais */
     color: #ffffff;
-    font-weight: 600;
-    padding: 0 35px 0 5px;
-    transition: 0.5s;
 }
 
-.input-box input:focus~label,
-.input-box input:valid~label {
-    bottom: 5px;
+.input-box.message textarea {
+    height: 355px; /* Ajuste a altura conforme necessário */
+    resize: none;
 }
 
+/* Estilização do botão */
 .btn {
-    position: absolute;
-    left: 25px;
-    bottom: 15px;
-    width: 90%;
-    height: 45px;
+    position: relative;
+    top: -30px;
+    width: 100%;
+    height: 55px;
     background: #fff;
     border: none;
     outline: none;
@@ -223,30 +154,33 @@ header {
     font-weight: 500;
 }
 
+/* Estilização do título do formulário */
 .Contato h4 {
-    position: absolute;
-    font-size: 50px;
-    /* Altere o tamanho do texto conforme necessário */
+    font-size: 40px; /* Reduzir o tamanho do título para melhorar a estética */
     color: #ffffff;
-    /* Cor do texto */
-    margin-bottom: 95px;
-    /* Espaço inferior para separar do restante do formulário */
-    left: 210px;
+    margin-bottom: 20px; /* Reduzir o espaço inferior do título */
+    text-align: center; /* Centralizar o título */
 }
+
+/* Adicionar algum espaçamento entre o título e os campos */
+.Contato .input-box {
+    margin-top: 20px;
+}
+
 
 /* Estilos para o contêiner do mapa */
 .map-container {
-    left: 240px;
+    left: 300px;
     position: relative;
-    bottom: 380px;
+    bottom: 560px;
     width: 100%;
-    height: 600px; /* Ajuste conforme necessário */
+    height: 600px; 
 }
 
 /* Estilos para a tag iframe do Google Maps */
 .map-container iframe {
-    width: 130%;
-    height: 95%;
+    width: 125%;
+    height: 113%;
     border: none; /* Remover a borda */
 }
 
