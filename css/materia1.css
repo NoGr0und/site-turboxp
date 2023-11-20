@@ -124,9 +124,30 @@ section {
     max-width: 40%;/*tamanho da imagem*/
     height: auto;
     position: absolute; /* Usando position: absolute para posicionar a imagem dentro de .materia-item */
-    top: 160px; 
+    top: 350px; 
     left: 1160px; 
     transform: translate(-50%, -50%); /* Centralizando a imagem dentro de .materia-item */
 }
 
+.btncomp {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    color: #000000;
+    background-color: white;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    right: 300px;
+    top: 400px;
+}
 
+.btncomp:hover {
+    background-color: #000000;
+    color: white;
+    border-color: #000000;
+}

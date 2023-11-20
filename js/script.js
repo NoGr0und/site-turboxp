@@ -56,3 +56,19 @@ bannerIndicators.forEach((indicator, index) => {
 });
 
 setInterval(nextSlide, 8000);
+
+document.getElementById('botaoCompartilhar').addEventListener('click', function() {
+    // Verifica se o navegador suporta a API Web Share
+    if (navigator.share) {
+        navigator.share({
+            title: 'Título do Link',
+            text: 'Descrição ou texto adicional',
+            url: 'https://www.youtube.com/watch?v=0KSOMA3QBU0'
+        })
+        .then(() => console.log('Link compartilhado com sucesso!'))
+        .catch((error) => console.error('Erro ao compartilhar link:', error));
+    } else {
+        // Se o navegador não suportar a API Web Share, você pode fornecer um fallback ou mensagem alternativa.
+        alert('Seu navegador não suporta a função de compartilhamento. Você pode copiar o link manualmente.');
+    }
+});
