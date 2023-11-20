@@ -354,7 +354,7 @@ section h3 {
     position: absolute;
     display: flex;
     justify-content: center;
-    top: 740px;
+    top: 760px;
     left: 0; /* Centralize os indicadores na horizontal */
     right: 0;
 }
