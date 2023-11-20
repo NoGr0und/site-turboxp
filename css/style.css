@@ -411,7 +411,25 @@ section h3 {
     box-shadow:0 0 15px rgb(255, 255, 255);
     position: relative;
     display: absolute;
-    top: 750px;
+    top: 900px;
+    width: 50%;
+    height: 230px;
+    left: 30px;
+   }
+
+   .estrutura2 {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 20px;
+    border: white;
+    border-radius: 10px;
+    box-shadow:0 0 15px rgb(255, 255, 255);
+    position: relative;
+    display: fixed;
+    top: 140px;
+    left: 1000px;
+    width: 40%;
+    height: 750px;
    }
 
   .footer {
@@ -423,7 +441,7 @@ section h3 {
     color: #000000;
     position: relative;
     display: absolute;
-    top: 1100px;
+    top: 600px;
     justify-content: space-between;
    }
 
