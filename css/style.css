@@ -342,19 +342,19 @@ section h3 {
     font-weight: 600;
     font-size: 60px;
     left: 120px;
-    bottom: 150px;
+    bottom: 180px;
     display: flex;
     align-items: center;  
     justify-content: center;
     text-decoration: none;
     color: #ffffff;
 }
-
+/*botoes do banner*/
 .banner-indicators {
     position: absolute;
     display: flex;
     justify-content: center;
-    bottom: 80px; /* Mova os indicadores para a parte inferior */
+    top: 740px;
     left: 0; /* Centralize os indicadores na horizontal */
     right: 0;
 }
@@ -371,7 +371,8 @@ section h3 {
 .banner-indicator.active {
     background-color: #000000; /* Cor preta para o indicador ativo */
 }
-
+/*fim do banner*/
+/*começo da pesquisa*/
 .form-pesquisa{
     padding: 20px;
     display: flex;
@@ -401,6 +402,7 @@ section h3 {
 .input-pesquisabtn[type="submit"]:hover {
     background-color: #0696f7;
 }
+/*fim da pesquisa*/
 
 .estrutura {
     background-color: #f2f2f2;
