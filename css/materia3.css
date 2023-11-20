@@ -65,7 +65,7 @@ header {
 /* Estilos do corpo da página */
 body {
     position: relative;
-    top: 50px;
+    top: 70px;
     font-weight: 100;
     margin-left: 40px;
     border-radius: 6px;
@@ -81,9 +81,9 @@ body {
 /* Estilos para a seção principal */
 section {
     position: relative;
-    top: 90px;
+    top: -90px;
     width: 1500px;/*lados*/
-    height: 730px; /*baixo*/
+    height: 380px; /*baixo*/
     background: transparent;
     border: 2px solid #fff;
     border-radius: 6px;
@@ -107,11 +107,11 @@ section {
 }
 
 #container h3 {
-    margin: 20px; /* Adicione margens ao redor do texto conforme necessário */
-    left: 10px;
+    margin: 10px; /* Adicione margens ao redor do texto conforme necessário */
+    left: 5px;
     position: relative;
     font-weight: 80;
-    font-size: 35px;
+    font-size: 34px;
     color: #fff;
     font-weight: 600;
 }
@@ -124,9 +124,7 @@ section {
     max-width: 40%;/*tamanho da imagem*/
     height: auto;
     position: absolute; /* Usando position: absolute para posicionar a imagem dentro de .materia-item */
-    top: 160px; 
+    top: 180px; 
     left: 1160px; 
     transform: translate(-50%, -50%); /* Centralizando a imagem dentro de .materia-item */
 }
-
-

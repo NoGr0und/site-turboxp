@@ -313,7 +313,7 @@ section h3 {
 /* banner */
 
 .banner-container {
-    top: 130px;
+    top: 200px;
     position: absolute;
     overflow: hidden;
 }
@@ -354,7 +354,7 @@ section h3 {
     position: absolute;
     display: flex;
     justify-content: center;
-    bottom: 150px; /* Mova os indicadores para a parte inferior */
+    bottom: 80px; /* Mova os indicadores para a parte inferior */
     left: 0; /* Centralize os indicadores na horizontal */
     right: 0;
 }
