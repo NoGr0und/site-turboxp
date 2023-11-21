@@ -9,6 +9,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 /* Estilização do logotipo */
 .logo {
     width: 200px; /* Largura do logotipo */
@@ -432,6 +433,20 @@ section h3 {
     left: 1000px;
     width: 40%;
     height: 750px;
+   }
+
+   .estrutura3 {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 20px;
+    border: white;
+    border-radius: 10px;
+    box-shadow:0 0 15px rgb(255, 255, 255);
+    position: relative;
+    display: absolute;
+    top: 200px;
+    width: 80%;
+
    }
 
   .footer {
