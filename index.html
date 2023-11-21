@@ -18,6 +18,40 @@
         </form>
         </div>
         <!--navbar-->
+    
+  <style>
+    body {
+      transition: background-color 0.5s;
+    }
+    
+    .dark-mode {
+      background-color: #dbd0d0;
+      color: #030101;
+    }
+  </style>
+  <title>Light/Dark Mode Toggle</title>
+</head>
+<body>
+
+  <h1>D/L</h1>
+
+  <label class="switch">
+    <input type="checkbox" id="modeToggle">
+    <span class="slider"></span>
+  </label>
+
+  <script>
+    const modeToggle = document.getElementById('modeToggle');
+    const body = document.body;
+
+    modeToggle.addEventListener('change', () => {
+      body.classList.toggle('dark-mode');
+    });
+  </script>
+
+</body>
+</html>
+
         <nav class="navegacao">
           <a href="index.html">Home</a>
           <a href="qmsms.html">Sobre</a>
